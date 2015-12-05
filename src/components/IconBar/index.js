@@ -7,18 +7,19 @@ import Waypoint from 'react-waypoint';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 class IconBar extends Component {
-  constructor(...args) {
+  constructor (...args) {
     super(...args);
     this.handleIconsEnter = this.handleIconsEnter.bind(this);
     this.handleIconsLeave = this.handleIconsLeave.bind(this);
-    this.state = { 
+    this.state = {
       hidden: Array(14).fill(true)
     };
   }
 
   handleIconsLeave () {
-    if (this.cancel)
+    if (this.cancel) {
       this.cancel();
+    }
 
     setTimeout(() => {
       this.setState({
@@ -29,9 +30,9 @@ class IconBar extends Component {
   handleIconsEnter () {
     let startIndex = 0;
     let { hidden } = this.state;
-    let len = hidden.length
+    let len = hidden.length;
 
-    this.cancel = () => { console.log('Cancelling Animation'); len = 0 }
+    this.cancel = () => { console.log('Cancelling Animation'); len = 0; };
 
     let beginAnimation = () => {
       hidden = this.state.hidden;
@@ -50,12 +51,11 @@ class IconBar extends Component {
       } else {
         this.cancel = null;
       }
-    }
+    };
     setTimeout(beginAnimation, 250);
-
   }
-  render() {
-    let { iconsHidden, hidden } = this.state;
+  render () {
+    let { hidden } = this.state;
     let children = Object.keys(Icons).map((key, index) => {
       let Icon = Icons[key];
       return (
@@ -96,6 +96,7 @@ class IconBar extends Component {
     );
 
     return rowsOfChildren;
+    /*
     return (
       <div style={ {
         position: 'absolute',
@@ -108,6 +109,7 @@ class IconBar extends Component {
         {rowsOfChildren}
       </div>
     );
+    */
   }
 
 }
