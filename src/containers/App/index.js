@@ -4,15 +4,18 @@ import React, { Component } from 'react';
 
 import Home from 'components/Home/';
 
+import { Panel } from 'react-bootstrap';
+
 class App extends Component {
   constructor (props) {
     super(props);
   }
   render () {
+    let { children } = this.props;
     return (
-      <div>
-        <Home />
-      </div>
+      <Panel>
+        {children}
+      </Panel>
     );
   }
 }

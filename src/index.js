@@ -2,10 +2,8 @@
 import React from 'react';
 /* eslint-enable no-unused-vars*/
 import { render } from 'react-dom';
-
-import App from 'containers/App/';
+import Routes from './routes/';
 const root = document.getElementById('root');
 
-render(<App />, root);
-
+render(<Routes />, root);
 console.log('Runner runner');
