@@ -9,7 +9,7 @@ const IconBar = () => {
     let Icon = Icons[key];
     return (
       <Icon key={key} style={ { display: 'inline-block', width: '5vw' } } />
-    )
+    );
   });
   return (
     <div style={ {
@@ -21,8 +21,8 @@ const IconBar = () => {
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default IconBar;
 
