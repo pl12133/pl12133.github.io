@@ -2,10 +2,6 @@
 import React, { Component } from 'react';
 /* eslint-enable no-unused-vars*/
 
-import Home from 'components/Home/';
-
-import { Panel } from 'react-bootstrap';
-
 class App extends Component {
   constructor (props) {
     super(props);
@@ -13,9 +9,9 @@ class App extends Component {
   render () {
     let { children } = this.props;
     return (
-      <Panel>
+      <div>
         {children}
-      </Panel>
+      </div>
     );
   }
 }
