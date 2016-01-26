@@ -16,24 +16,27 @@ const imageURLS = [
 const Home = () => (
   <div style={ { width: '100%' } }>
     <FullscreenPanel
-      color='blue'
       downArrow
       imageURL={imageURLS[0]}
+      style={ {
+        backgroundAttachment: 'fixed',
+        backgroundColor: 'rgba(0,0,0,.9)' } }
     >
       <About />
     </FullscreenPanel>
 
     <FullscreenPanel
-      color='orange'
       downArrow
+      upArrow
+      style={ { backgroundColor: 'rgba(0,0,0,.9)' } }
       imageURL={imageURLS[1]}
     >
       <Skills />
     </FullscreenPanel>
 
     <FullscreenPanel
-      color='purple'
-      downArrow
+      upArrow
+      style={ { backgroundColor: 'rgba(0,0,0,.9)' } }
       imageURL={imageURLS[2]}
     >
       <Projects />
