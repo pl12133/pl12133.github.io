@@ -8,9 +8,9 @@ import Projects from 'containers/Projects/';
 import FullscreenPanel from 'components/FullscreenPanel/';
 
 const imageURLS = [
-  'http://assets.sheratonlincolnharbor.com/lps/assets/u/1600x900iStock_000041057230XXXLarge.jpg',
-  'http://loving-newyork.com/wp-content/uploads/2015/10/empire-state-building-new-york.jpg',
-  'http://justgoodvibe.com/wp-content/uploads/2015/12/one-world-trade-center-6.jpg'
+  'dist/empire_state_building_bw_edit-wallpaper-1920x1080.jpg',
+  'dist/skyline_new_york_city_2015-wallpaper-1920x1080.jpg',
+  'dist/new_york_city_at_night-wallpaper-1920x1080.jpg'
 ];
 
 const Home = () => (
