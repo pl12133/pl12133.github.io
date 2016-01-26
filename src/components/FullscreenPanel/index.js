@@ -53,13 +53,18 @@ class FullscreenPanel extends Component {
 
     let downArrowElem = (downArrow) ? this.renderDownArrow() : '';
     let upArrowElem = (upArrow) ? this.renderUpArrow() : '';
-    let background = (imageURL) ? `url(\'${imageURL}\') no-repeat scroll center` : '';
+    let background = (imageURL)
+      ? {
+        background: `url(\'${imageURL}\') no-repeat scroll center`,
+        backgroundSize: 'cover'
+      }
+      : {};
     let containerStyle = {
       position: 'relative',
       width: '100%',
       height: '100vh',
       paddingTop: '5%',
-      background,
+      ...background,
       ...style
     };
     return (
