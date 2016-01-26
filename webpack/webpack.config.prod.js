@@ -7,8 +7,8 @@ module.exports = {
   ],
   output: {
       filename: 'bundle.js',
-      path: path.join(__dirname, '..', '/lib/'),
-      publicPath: '/lib/'
+      path: path.join(__dirname, '..', '/dist/'),
+      publicPath: '/dist/'
   },
   plugins: [  
     new webpack.optimize.DedupePlugin(),
