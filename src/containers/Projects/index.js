@@ -21,12 +21,14 @@ const Projects = () => (
         marginTop: '2%',
         marginLeft: '10%' } }
     >
-      <image
-        style={ {
-          width: '100%',
-          borderRadius: '1em' } }
-        src='dist/solitaire-demo.gif'
-      />
+      <a href={"https://github.com/pl12133/react-solitaire"}>
+        <image
+          style={ {
+            width: '100%',
+            borderRadius: '1em' } }
+          src='dist/solitaire-demo.gif'
+        />
+      </a>
     </div>
   </div>
 );
