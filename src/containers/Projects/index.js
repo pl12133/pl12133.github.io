@@ -14,6 +14,20 @@ const Projects = () => (
     >
       <h2>{'A few things I\'ve been working on'}</h2>
     </Jumbotron>
+    <div
+      style={ {
+        width: '30%',
+        height: 'auto',
+        marginTop: '2%',
+        marginLeft: '10%' } }
+    >
+      <image
+        style={ {
+          width: '100%',
+          borderRadius: '1em' } }
+        src='dist/solitaire-demo.gif'
+      />
+    </div>
   </div>
 );
 
