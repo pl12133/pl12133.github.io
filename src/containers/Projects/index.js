@@ -21,7 +21,7 @@ const Projects = () => (
         marginTop: '2%',
         marginLeft: '10%' } }
     >
-      <a href={"https://github.com/pl12133/react-solitaire"}>
+      <a href={"https://pl12133.github.io/react-solitaire"}>
         <image
           style={ {
             width: '100%',
