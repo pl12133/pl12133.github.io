@@ -12,9 +12,12 @@ const About = () => (
       boxShadow: '10px 5px 5px #888888',
       margin: '0 15px' } }
     >
-      <h1>{'Hello!'}</h1>
+      <h1>{'Welcome!'}</h1>
       <p>
-        {'My name is Peter, I live in New York and I like to play with computers.'}
+        {'My name is Peter, I live in New York and I have been interested in computers my whole life. I am currently focusing on expanding my skills in JavaScriptbecause of the power it has in both client and server applications.'}
+      </p>
+      <p>
+        {'My choice of library for making web applications is React because of its large community and the many open source modules available.'}
       </p>
     </Jumbotron>
   </div>

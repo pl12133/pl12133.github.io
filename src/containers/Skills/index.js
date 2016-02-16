@@ -14,6 +14,12 @@ const Skills = () => (
       margin: '0 15px' } }
     >
       <h2>{'My favorite languages and tools'}</h2>
+      <p>
+        {'When I started programming I used primarily C++, Lua, and Bash, I now focus on languages used for web development like JavaScript.'}
+      </p>
+      <p>
+        {'I have tinkered with computers for over 20 years of my life and as such my interests are very wide. I am familiar with networking, systems administration, security, reverse engineering, embedded systems, open source software, and software engineering.'}
+      </p>
     </Jumbotron>
     <IconBar />
   </div>
