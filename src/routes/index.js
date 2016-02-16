@@ -4,8 +4,8 @@ import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 
-import App from 'containers/App/';
-import Home from 'containers/Home/';
+import App from './App/';
+import Home from './Home/';
 
 const Routes = () => (
   <Router history={createBrowserHistory()}>
