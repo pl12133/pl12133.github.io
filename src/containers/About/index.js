@@ -14,7 +14,7 @@ const About = () => (
     >
       <h1>{'Welcome!'}</h1>
       <p>
-        {'My name is Peter, I live in New York and I have been interested in computers my whole life. I am currently focusing on expanding my skills in JavaScriptbecause of the power it has in both client and server applications.'}
+        {'My name is Peter, I live in New York and I have been interested in computers my whole life. I am currently focusing on expanding my skills in JavaScript because of the power it has in both client and server applications.'}
       </p>
       <p>
         {'My choice of library for making web applications is React because of its large community and the many open source modules available.'}
