@@ -16,6 +16,7 @@ const Projects = () => (
     </Jumbotron>
     <div
       style={ {
+        display: 'inline-block',
         width: '30%',
         height: 'auto',
         marginTop: '2%',
@@ -27,6 +28,23 @@ const Projects = () => (
             width: '100%',
             borderRadius: '1em' } }
           src='dist/solitaire-demo.gif'
+        />
+      </a>
+    </div>
+    <div
+      style={ {
+        display: 'inline-block',
+        width: '30%',
+        height: 'auto',
+        marginTop: '2%',
+        marginLeft: '20%' } }
+    >
+      <a href={"https://pl12133.github.io/watch-collection"}>
+        <image
+          style={ {
+            width: '100%',
+            borderRadius: '1em' } }
+          src='dist/watch-collection-demo.gif'
         />
       </a>
     </div>
