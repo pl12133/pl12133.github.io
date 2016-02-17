@@ -3,50 +3,62 @@ import React, { Component } from 'react';
 /* eslint-enable no-unused-vars*/
 
 import { Jumbotron } from 'react-bootstrap';
+import ScrimOverlay from 'components/ScrimOverlay/';
+
+const DemoVideo = ({overlayText, href, videoSrc}) => (
+  <a href={href}>
+    <ScrimOverlay text={overlayText} />
+    <video style={ { width: '100%' } } autoPlay loop>
+      <source src={videoSrc} type='video/webm' />
+    </video>
+  </a>
+);
+
+const JumboHeader = ({children}) => (
+  <Jumbotron style={ {
+    paddingLeft: '10px',
+    borderRadius: '2em',
+    boxShadow: '10px 5px 5px #888888',
+    margin: '0 15px' } }
+  >
+    <h2>{children}</h2>
+  </Jumbotron>
+);
+
+const containerStyles = {
+  position: 'relative',
+  display: 'inline-block',
+  width: '30%',
+  height: 'auto',
+  marginTop: '2%'
+};
 
 const Projects = () => (
   <div>
-    <Jumbotron style={ {
-      paddingLeft: '10px',
-      borderRadius: '2em',
-      boxShadow: '10px 5px 5px #888888',
-      margin: '0 15px' } }
+    <JumboHeader>
+      {'A few things I\'ve been working on'}
+    </JumboHeader>
+    <div style={ {
+      ...containerStyles,
+      marginLeft: '10%'
+    } }
     >
-      <h2>{'A few things I\'ve been working on'}</h2>
-    </Jumbotron>
-    <div
-      style={ {
-        display: 'inline-block',
-        width: '30%',
-        height: 'auto',
-        marginTop: '2%',
-        marginLeft: '10%' } }
-    >
-      <a href={"https://pl12133.github.io/react-solitaire"}>
-        <image
-          style={ {
-            width: '100%',
-            borderRadius: '1em' } }
-          src='dist/solitaire-demo.gif'
-        />
-      </a>
+      <DemoVideo
+        overlayText={'React Solitaire'}
+        href={"https://pl12133.github.io/react-solitaire"}
+        videoSrc={'dist/solitaire-demo.webm'}
+      />
     </div>
-    <div
-      style={ {
-        display: 'inline-block',
-        width: '30%',
-        height: 'auto',
-        marginTop: '2%',
-        marginLeft: '20%' } }
+    <div style={ {
+      ...containerStyles,
+      marginLeft: '20%'
+    } }
     >
-      <a href={"https://pl12133.github.io/watch-collection"}>
-        <image
-          style={ {
-            width: '100%',
-            borderRadius: '1em' } }
-          src='dist/watch-collection-demo.gif'
-        />
-      </a>
+      <DemoVideo
+        overlayText={'A personal watch collection'}
+        href={'https://pl12133.github.io/watch-collection'}
+        videoSrc={'dist/watch-collection-demo.webm'}
+      />
     </div>
   </div>
 );
