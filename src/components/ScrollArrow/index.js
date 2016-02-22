@@ -52,14 +52,12 @@ class ScrollArrow extends Component {
           left,
           transform: 'translate(-50%, -50%)',
           textAlign: 'center',
-          verticalAlign: 'center',
           zIndex: '1' } }
       >
-        <div
-          style={ {
+        <div style={ {
+            width: '4em',
+            height: 'auto',
             margin: '0 auto',
-            width: '50%',
-            height: '100%',
             borderRadius: '50%',
             backgroundColor: 'rgba(256,256,256,.9)',
             boxShadow: '2px 1px 1px #eeeeee' } }
