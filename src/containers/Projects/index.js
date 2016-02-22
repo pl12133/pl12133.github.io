@@ -5,10 +5,10 @@ import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import ScrimOverlay from 'components/ScrimOverlay/';
 
-const DemoVideo = ({overlayText, href, videoSrc}) => (
+const DemoVideo = ({overlayText, href, videoSrc, fallbackImageSrc}) => (
   <a href={href}>
     <ScrimOverlay text={overlayText} />
-    <video style={ { width: '100%' } } autoPlay loop>
+    <video style={ { width: '100%' } } autoPlay loop poster={fallbackImageSrc}>
       <source src={videoSrc} type='video/webm' />
     </video>
   </a>
@@ -47,6 +47,7 @@ const Projects = () => (
         overlayText={'React Solitaire'}
         href={"https://pl12133.github.io/react-solitaire"}
         videoSrc={'dist/solitaire-demo.webm'}
+        fallbackImageSrc={'dist/solitaire-demo.png'}
       />
     </div>
     <div style={ {
@@ -58,6 +59,7 @@ const Projects = () => (
         overlayText={'A personal watch collection'}
         href={'https://pl12133.github.io/watch-collection'}
         videoSrc={'dist/watch-collection-demo.webm'}
+        fallbackImageSrc={'dist/watch-collection-demo.png'}
       />
     </div>
   </div>
