@@ -6,9 +6,10 @@ import { Grid, Row, Col, Jumbotron } from 'react-bootstrap';
 import ScrimOverlay from 'components/ScrimOverlay/';
 
 // Width is adjusted by -30px for bootstrap grid mergins
-const DemoVideo = ({overlayText, href, videoSrc, fallbackImageSrc}) => (
+const DemoVideo = ({overlayHeader, overlayText, href, videoSrc, fallbackImageSrc}) => (
   <a href={href} style={ { display: 'block' } }>
     <ScrimOverlay
+      header={overlayHeader}
       text={overlayText}
       style={ { width: 'calc(100% - 30px)' } }
     />
@@ -54,7 +55,8 @@ const Projects = () => (
     <Row style={ { marginTop: '1%' } }>
       <Col xs={6} md={4}>
         <DemoVideo
-          overlayText={'React Solitaire'}
+          overlayHeader={'React Solitaire'}
+          overlayText={'A game of Solitaire written in React with Redux'}
           href={"https://pl12133.github.io/react-solitaire"}
           videoSrc={'dist/solitaire-demo.webm'}
           fallbackImageSrc={'dist/solitaire-demo.png'}
@@ -62,7 +64,8 @@ const Projects = () => (
       </Col>
       <Col xs={6} md={4}>
         <DemoVideo
-          overlayText={'watch-collection'}
+          overlayHeader={'watch-collection'}
+          overlayText={'A personal watch collection'}
           href={'https://pl12133.github.io/watch-collection'}
           videoSrc={'dist/watch-collection-demo.webm'}
           fallbackImageSrc={'dist/watch-collection-demo.png'}
@@ -70,7 +73,8 @@ const Projects = () => (
       </Col>
       <Col xs={6} md={4}>
         <DemoVideo
-          overlayText={'node-twitch-clipper'}
+          overlayHeader={'node-twitch-clipper'}
+          overlayText={'A module for creating clips from Twitch.tv VODs'}
           href={'https://pl12133.github.io/node-twitch-clipper-demo'}
           videoSrc={''}
           fallbackImageSrc={'dist/twitch-clipper-demo.png'}
