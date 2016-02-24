@@ -13,13 +13,11 @@ class ScrimOverlay extends Component {
   }
 
   handleMouseLeave (e) {
-    console.log('Hover: ' + this.state.hover);
     this.setState({
       hover: false
     });
   }
   handleMouseOver (e) {
-    console.log('Hover: ' + this.state.hover);
     this.setState({
       hover: true
     });
@@ -32,14 +30,13 @@ class ScrimOverlay extends Component {
     let backgroundImage = 'none';
     if (!hover) {
       textElem = (
-        <p style={ {
+        <h3 style={ {
           color: 'white',
-          fontSize: 'xx-large',
           margin: '5%'
         } }
         >
           {text}
-        </p>
+        </h3>
       );
       backgroundImage = 'linear-gradient( rgba(0,0,0,.5), rgba(0,0,0, .5) )';
     }
