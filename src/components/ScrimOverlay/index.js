@@ -23,22 +23,24 @@ class ScrimOverlay extends Component {
     });
   }
   render () {
-    let { text, style } = this.props;
+    let { header, text, style } = this.props;
     let { hover } = this.state;
 
-    let textElem = '';
+    let textElems = [];
     let backgroundImage = 'none';
     if (!hover) {
-      textElem = (
-        <h3 style={ {
-          color: 'white',
-          margin: '5%'
-        } }
-        >
-          {text}
+      let whiteTextStyle = { color: 'white', margin: '5%' };
+      header && textElems.push(
+        <h3 style={whiteTextStyle}>
+          {header}
         </h3>
       );
-      backgroundImage = 'linear-gradient( rgba(0,0,0,.5), rgba(0,0,0, .5) )';
+      text && textElems.push(
+        <p style={whiteTextStyle}>
+          {text}
+        </p>
+      );
+      backgroundImage = 'linear-gradient( rgba(0,0,0,.8), rgba(0,0,0, .8) )';
     }
     return (
       <div
@@ -54,13 +56,14 @@ class ScrimOverlay extends Component {
           ...style
         } }
       >
-        {textElem}
+        {textElems}
       </div>
     );
   }
 }
 
 ScrimOverlay.propTypes = {
+  header: PropTypes.string,
   text: PropTypes.string,
   style: PropTypes.object
 };
