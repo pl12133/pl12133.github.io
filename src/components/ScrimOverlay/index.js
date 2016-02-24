@@ -31,12 +31,12 @@ class ScrimOverlay extends Component {
     if (!hover) {
       let whiteTextStyle = { color: 'white', margin: '5%' };
       header && textElems.push(
-        <h3 style={whiteTextStyle}>
+        <h3 key={'header'} style={whiteTextStyle}>
           {header}
         </h3>
       );
       text && textElems.push(
-        <p style={whiteTextStyle}>
+        <p key={'text'} style={whiteTextStyle}>
           {text}
         </p>
       );
