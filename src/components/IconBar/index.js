@@ -58,6 +58,8 @@ class IconBar extends Component {
     let { hidden } = this.state;
     let children = Object.keys(Icons).map((key, index) => {
       let Icon = Icons[key];
+      let transform = (hidden[index]) ? 'translate3d(0,250%,0)' : 'translate3d(0,0,0)';
+      let transition = (hidden[index]) ? '' : 'transform 350ms ease-out';
       return (
         <Icon
           key={key}
@@ -66,19 +68,21 @@ class IconBar extends Component {
             width: '10vh'
           } }
           svgStyle={ {
-            transform: (hidden[index]) ? 'translate3d(0,250%,0)' : 'translate3d(0,0,0)',
-            transition: (hidden[index]) ? '' : 'transform 350ms ease-out'
+            transform,
+            transition
           } }
         />
       );
     });
-    let rowsOfChildren = (
-      <Grid style={ {
-        position: 'absolute',
-        top: '75%',
-        width: '100%',
-        background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))',
-        textAlign: 'center' } }
+    return (
+      <Grid
+        style={ {
+          position: 'absolute',
+          top: '75%',
+          width: '100%',
+          background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))',
+          textAlign: 'center'
+        } }
       >
         <Row>
           <Col xs={12} sm={6}>
@@ -94,22 +98,6 @@ class IconBar extends Component {
         />
       </Grid>
     );
-
-    return rowsOfChildren;
-    /*
-    return (
-      <div style={ {
-        position: 'absolute',
-        top: '75%',
-        width: '100%',
-        height: '10%',
-        background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))',
-        textAlign: 'center' } }
-      >
-        {rowsOfChildren}
-      </div>
-    );
-    */
   }
 
 }
