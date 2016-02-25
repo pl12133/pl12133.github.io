@@ -12,7 +12,7 @@ class IconBar extends Component {
     this.handleIconsEnter = this.handleIconsEnter.bind(this);
     this.handleIconsLeave = this.handleIconsLeave.bind(this);
     this.state = {
-      hidden: Array(14).fill(true)
+      hidden: Array.apply(null, Array(14)).map(() => true)
     };
   }
 
@@ -23,7 +23,7 @@ class IconBar extends Component {
 
     setTimeout(() => {
       this.setState({
-        hidden: Array(14).fill(true)
+        hidden: Array.apply(null, Array(14)).map(() => true)
       });
     }, 1250);
   }
