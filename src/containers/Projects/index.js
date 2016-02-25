@@ -35,14 +35,6 @@ const JumboHeader = ({children}) => (
   </Jumbotron>
 );
 
-const containerStyles = {
-  position: 'relative',
-  display: 'inline-block',
-  width: '30%',
-  height: 'auto',
-  marginTop: '2%'
-};
-
 const Projects = () => (
   <Grid>
     <Row>

@@ -54,13 +54,15 @@ class ScrollArrow extends Component {
           textAlign: 'center',
           zIndex: '1' } }
       >
-        <div style={ {
+        <div
+          style={ {
             width: '4em',
             height: 'auto',
             margin: '0 auto',
             borderRadius: '50%',
             backgroundColor: 'rgba(256,256,256,.9)',
-            boxShadow: '2px 1px 1px #eeeeee' } }
+            boxShadow: '2px 1px 1px #eeeeee'
+          } }
         >
           <FontAwesome
             style={ { color: (this.state.hover) ? 'purple' : 'orange' } }
