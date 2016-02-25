@@ -32,8 +32,15 @@ class ScrollArrow extends Component {
 
   render () {
     let { leftOrRight, upOrDown, onClick } = this.props;
+    let { hover } = this.state;
     let name = 'angle-double-' + upOrDown;
+    let transform;
     let left;
+    if (upOrDown === 'up') {
+      transform = (hover) ? 'translateY(-33%)' : 'translateY(0)';
+    } else {
+      transform = (hover) ? 'translateY(33%)' : 'translateY(0)';
+    }
     if (leftOrRight === 'left') {
       left = '15%';
     } else if (leftOrRight === 'right') {
@@ -56,6 +63,9 @@ class ScrollArrow extends Component {
       >
         <div
           style={ {
+            transition: 'transform .5s ease-in-out',
+            transform,
+            cursor: 'pointer',
             width: '4em',
             height: 'auto',
             margin: '0 auto',
